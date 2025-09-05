@@ -1,9 +1,12 @@
 from flask import Flask, request, render_template
+from dotenv import load_dotenv
 from openai import OpenAI
 import os
 
 app = Flask(__name__)
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key)
 
 # 감정 매핑 데이터
 emotion_data = {
