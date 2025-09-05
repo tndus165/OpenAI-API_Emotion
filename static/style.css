@@ -1,0 +1,9 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+textarea {
+  resize: none;
+}
+.card {
+  border-radius: 12px;
+}
